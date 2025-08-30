@@ -1,12 +1,65 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROCK PAPER SCISSORS</title>
-    <script src="main.js"></script>
+    <title>Rock Paper Scissors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f0f0f0;
+        }
+        .game-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #result, #score, #round {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+        #reset {
+            display: none;
+            background-color: #2196F3;
+        }
+        #reset:hover {
+            background-color: #1976D2;
+        }
+    </style>
 </head>
 <body>
-    <h1>ROCK PAPER SCISSORS GAME</h1>
+    <div class="game-container">
+        <h1>Rock Paper Scissors</h1>
+        <h3>Play 5 Rounds!</h3>
+        <div id="round">Round: 1</div>
+        <div id="score">Player: 0 | Computer: 0</div>
+        <button onclick="playGame('rock')">Rock</button>
+        <button onclick="playGame('paper')">Paper</button>
+        <button onclick="playGame('scissors')">Scissors</button>
+        <div id="result"></div>
+        <button id="reset" onclick="resetGame()">Play Again</button>
+    </div>
+
+    <script src="main.js">
+    </script>
 </body>
 </html>
